@@ -37,6 +37,13 @@ let books = [
     }
 ];
 
+/**
+ * get route | list all books
+ */
+ app.get("/bookslist", (req, res) => {
+   res.send(books);
+ });
+
 
 /**
  * listen to port
