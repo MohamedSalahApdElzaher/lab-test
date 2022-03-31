@@ -11,6 +11,39 @@ const app = express();
 app.use(bodyparser.json());
 const port = 3001;
 
+/**
+ * add data object | for ex: books api
+ * {
+ *  id: number
+ *  name: string
+ *  author: string
+ * }
+ */
+let books = [
+    {
+        id:1,
+        name:"human\'s life",
+        author:"john doe",
+    },
+    {
+        id:2,
+        name:"animal\'s life",
+        author:"barker hamed",
+    },
+    {
+        id:3,
+        name:"birds\'s life",
+        author:"angela luba",
+    }
+];
+
+/**
+ * get route | list all books
+ */
+ app.get("/bookslist", (req, res) => {
+   res.send(books);
+ });
+
 
 /**
  * listen to port
