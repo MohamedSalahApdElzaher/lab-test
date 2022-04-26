@@ -28,7 +28,7 @@ mongoose.connect(url)
         });
     }).catch((err) => console.log(err));
 
-
+    
 // home
 app.get("/", (req, res) => {
     res.redirect('/bookslist');
@@ -47,7 +47,7 @@ app.get("/bookslist", (req, res) => {
 
 
 /**
-*  get book with max price 
+*  get book with max price from database
 */
 app.get("/bookmax", (req, res) => {
     Book.find()

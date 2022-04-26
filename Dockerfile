@@ -1,4 +1,16 @@
 FROM node:alpine
-COPY . /app
+
 WORKDIR /app
-CMD node app.js
+
+# Install app dependencies
+# A wildcard is used to ens ure both package.json AND package-lock.json are copied
+COPY package*.json ./
+
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+EXPOSE 3001
+
+CMD [ "npm", "start" ]
