@@ -66,3 +66,32 @@ app.get("/bookmax", (req, res) => {
 ```
 ## output
 ![2](https://user-images.githubusercontent.com/47748059/165386154-8ebf3aa0-01a5-4a42-93bf-d876800cce14.PNG)
+
+```
+/**
+*  delete book from database
+*/
+app.delete('/delete/:_id',async (req,res)=>{
+    const is_valid = mongoose.isValidObjectId(req.params._id);
+    if(is_valid)
+    {
+        Book.remove({_id:req.params._id})
+        .then((result) => {
+            res.send('data removed successfully');
+        })
+        .catch((err) => { console.log(err) });
+    }else
+    {
+        res.send({
+            msg:"invalid id please enter valid id"
+        });
+    }
+});
+```
+## output before delete
+![10](https://user-images.githubusercontent.com/47748059/165483928-cea7467f-316a-42b4-a1c6-a0f335be156c.PNG)
+## output after delete
+![12](https://user-images.githubusercontent.com/47748059/165484017-e238c981-38c8-4dac-bc75-52a33918b00d.PNG)
+![13](https://user-images.githubusercontent.com/47748059/165484042-e612938a-de62-49e1-bbb6-f8fa673a5f95.PNG)
+
+
