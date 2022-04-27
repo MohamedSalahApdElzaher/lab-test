@@ -1,5 +1,7 @@
+# Alpine version is the minimal docker image based on Alpine Linux
 FROM node:alpine
 
+#sets the working directory
 WORKDIR /app
 
 # Install app dependencies
@@ -11,6 +13,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 3001
+#expose ports
+EXPOSE 3001 
 
+#provides commands to executing continer
 CMD [ "npm", "start" ]
