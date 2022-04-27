@@ -13,8 +13,6 @@ bookRouter.post('/',Book.createBook);
 bookRouter.delete('/:id' ,Book.deleteBook);
 
 
-bookRouter.patch('/:id',Book.updateBook);
-
 
 module.exports={
     bookRouter
