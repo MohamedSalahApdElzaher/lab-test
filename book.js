@@ -9,9 +9,7 @@ const bookRouter =Router();
 //to create  new book in monoogse database
 bookRouter.post('/',Book.createBook);
 
-// to updte the bok information
-
-
+// to update the book information
 bookRouter.patch('/:id',Book.updateBook);
 
 
