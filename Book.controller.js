@@ -16,7 +16,7 @@ const createBook = async(req,res) => {
         res.status(400).send(e);
     }
 };
-const updateUser = async (req, res) => {
+const updateBook = async (req, res) => {
     try{
         const bookId = req.params.id;
         const book = await Book.findOne({_id:bookId});
