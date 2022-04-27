@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
     res.redirect('/bookslist');
 });
 
+
 /**
  *  list all books from database
  */
@@ -65,9 +66,25 @@ app.get("/bookmax", (req, res) => {
         .catch((err) => { console.log(err) });
 });
 
-
-
-
+/**
+*  delete book from database
+*/
+app.delete('/delete/:_id',async (req,res)=>{
+    const is_valid = mongoose.isValidObjectId(req.params._id);
+    if(is_valid)
+    {
+        Book.remove({_id:req.params._id})
+        .then((result) => {
+            res.send('data removed successfully');
+        })
+        .catch((err) => { console.log(err) });
+    }else
+    {
+        res.send({
+            msg:"invalid id please enter valid id"
+        });
+    }
+});
 
 
 
