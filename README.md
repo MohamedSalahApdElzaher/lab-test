@@ -42,7 +42,7 @@ app.get("/bookslist", (req, res) => {
 });
 ```
 ## output
-![1](https://user-images.githubusercontent.com/47748059/165385874-a2dfd5cc-5ebe-4da5-b781-79739fdefd3c.PNG)
+![10](https://user-images.githubusercontent.com/47748059/165483928-cea7467f-316a-42b4-a1c6-a0f335be156c.PNG)
 
 ```
 /**
@@ -65,7 +65,7 @@ app.get("/bookmax", (req, res) => {
 });
 ```
 ## output
-![2](https://user-images.githubusercontent.com/47748059/165386154-8ebf3aa0-01a5-4a42-93bf-d876800cce14.PNG)
+![14](https://user-images.githubusercontent.com/47748059/165489168-e98a0708-d6b9-42da-9f5b-dae7ec27933e.PNG)
 
 ```
 /**
